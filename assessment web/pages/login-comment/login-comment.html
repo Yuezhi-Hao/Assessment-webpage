@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-comment.css">
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database-compat.js"></script>
+    <script src="/assessment web/scripts/firebaseconfig.js" defer></script>
+
+</head>
+<body>
+    <div id="auth-container">
+        <h2>User Login</h2>
+        <input type="email" id="email" placeholder="email" required>
+        <input type="password" id="password" placeholder="password" required>
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="comment-section" style="display:none;">
+        <h2>评论区</h2>
+        <textarea id="comment-text" placeholder="Typing"></textarea>
+        <button onclick="postComment()">Comment</button>
+        <div id="comments"></div>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <script src="/assessment web/scripts/login.js" defer></script>
+</body>
+</html>

@@ -1,47 +1,130 @@
+/* 全局样式 */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    color: #333;
 }
 
+/* 标题样式 */
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* 容器样式 */
 .container {
     width: 100%;
     max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-input, button {
+/* 输入框和按钮样式 */
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
     padding: 10px;
     font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-button {
-    cursor: pointer;
-    background-color: #4CAF50;
+#todo-input:focus {
+    border-color: #007bff;
+}
+
+#add-todo-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+#add-todo-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 任务列表样式 */
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 0;
 }
 
 li {
-    background-color: #f4f4f4;
-    padding: 10px;
-    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.completed {
+li.completed {
+    background-color: #d4edda;
+    color: #155724;
     text-decoration: line-through;
-    color: gray;
+}
+
+li span {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* 按钮组样式 */
+li button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 各个按钮的颜色 */
+li button:nth-child(2) { /* Edit 按钮 */
+    background-color: #ffc107;
+    color: #fff;
+}
+
+li button:nth-child(2):hover {
+    background-color: #e0a800;
+}
+
+li button:nth-child(3) { /* Complete 按钮 */
+    background-color: #28a745;
+    color: #fff;
+}
+
+li button:nth-child(3):hover {
+    background-color: #218838;
+}
+
+li button:nth-child(4) { /* Delete 按钮 */
+    background-color: #dc3545;
+    color: #fff;
+}
+
+li button:nth-child(4):hover {
+    background-color: #c82333;
 }
