@@ -14,7 +14,7 @@
     height: 460px;
     width: 320px;
     border-radius: 18px;
-    background: url(/assets/images/123.jpg) no-repeat;
+    background: url(123.jpg) no-repeat;
     background-size: 350px;
     box-shadow: 0 70px 60px -60px rgb(0, 0, 0);
 
@@ -42,7 +42,7 @@
 
 }
 .card:hover{
-    background: url(/assets/images/123.jpg) top center no-repeat;
+    background: url(123.jpg) top center no-repeat;
     background-size: 500px;
 
 }

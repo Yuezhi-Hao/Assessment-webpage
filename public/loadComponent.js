@@ -15,5 +15,5 @@ function loadComponent(elementId, filePath) {
 
 // Load the components when the window has finished loading
 window.onload = function () {
-    loadComponent('header', '../components/header/header.html'); // Load the header component into the div with ID 'header1'
+    loadComponent('header', 'header.html'); // Load the header component into the div with ID 'header1'
 };
