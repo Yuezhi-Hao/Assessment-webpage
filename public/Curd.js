@@ -1,9 +1,9 @@
-// Select DOM Elements
+
 const addTodoBtn = document.getElementById('add-todo-btn');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
 
-// Add TODO Item to Firebase
+
 addTodoBtn.addEventListener('click', () => {
     const todoText = todoInput.value.trim();
     if (todoText.length > 0) {
@@ -17,7 +17,7 @@ addTodoBtn.addEventListener('click', () => {
     }
 });
 
-// Listen for Data and Display
+
 todoRef.on('value', (snapshot) => {
     todoList.innerHTML = '';
     snapshot.forEach((childSnapshot) => {
@@ -29,12 +29,12 @@ todoRef.on('value', (snapshot) => {
             li.classList.add('completed');
         };
         
-        // Display the task text
+      
         const todoTextSpan = document.createElement('span');
         todoTextSpan.textContent = todoItem.text;
         li.appendChild(todoTextSpan);
 
-        // Edit button
+       
         const editBtn = document.createElement('button');
         editBtn.textContent = 'Edit';
         editBtn.addEventListener('click', () => {
@@ -48,7 +48,7 @@ todoRef.on('value', (snapshot) => {
         });
         li.appendChild(editBtn);
 
-        // Complete button
+    
         const completeBtn = document.createElement('button');
         completeBtn.textContent = 'Complete';
         completeBtn.addEventListener('click', () => {
@@ -58,7 +58,7 @@ todoRef.on('value', (snapshot) => {
         });
         li.appendChild(completeBtn);
 
-        // Delete button
+     
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
         deleteBtn.addEventListener('click', () => {
