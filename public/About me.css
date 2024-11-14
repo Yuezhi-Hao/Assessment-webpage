@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.timeline{
+    position: relative;
+    margin:50px auto;
+    padding: 180px;
+    width: 1800px;
+    box-sizing: border-box;
+
+}
+.timeline::before {content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 800px;
+    background-color: #AD49E1;
+
+}
+.timeline ul{
+    margin: 0;
+    padding: 0;
+}
+.timeline ul li{
+    list-style: none;
+    line-height: normal;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    
+}
+.timeline ul li:nth-child(odd){
+    float: left;
+    text-align: right;
+    clear: both;
+}
+.timeline ul li:nth-child(even){
+    float: right;
+    text-align: left;
+    clear: both;
+}
+.timeline ul li:nth-child(odd)::before {
+    content:'';
+    position:absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: #AD49E1;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, .2);
+}
+ .timeline ul li:nth-child(even)::before {
+        content:'';
+        position:absolute;
+        top: 24px;
+        left: -4px;
+        width: 10px;
+        height: 10px;
+        background-color: #AD49E1;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(233, 33, 99, .2);}
+
+
+
+.timeline ul li h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: #AD49E1;
+
+}
+.timeline ul li p {
+    margin: 10px 0 0;
+    padding: 0;
+}
+.timeline ul li .time h4{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    
+
+}
+.timeline ul li:nth-child(odd) .time{
+    position: absolute;
+    top: 12px;
+    right: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background-color: #AD49E1;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, .2);
+
+}
+.timeline ul li:nth-child(even) .time{
+    position: absolute;
+    top: 12px;
+    left: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background-color: #FFAF00;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px #825900;
+
+
+
+}
+
+#text{
+    font-size: 1.3em;
+    width: 100%;
+    height: 150vh;
+   
+    background-color: #F4EEE0;
+    background-size:cover ;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+ 
