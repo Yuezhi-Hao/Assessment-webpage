@@ -1,67 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-comment.css">
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database-compat.js"></script>
+    <script src="firebaseconfig.js" defer></script>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.0.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.0.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.0.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.0.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.0.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.0.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.0.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.0.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.0.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.0.1/firebase-performance-compat.js"></script>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="home.css">
-  </head>
-  <body>
-    <div id="header"></div>
- 
-
-
-<div class="text">
-      <div class="intro">
-       <h2>Hi, This is <div><span >Yuezhi-Hao </span><span class="shan">!</span></div></h2>
-       <h4><span >IT </span> Student</h4>
-       <p>
-        Hello,my name is Hao. Nice to meet you. I am currently an IT student at NMIT.
-        I am very interested in programming. I wish I could keep learning,Continuing progress.
-        I hope to become a good IT professional in the future.
-       </p>
-        <div class="button">
-          <a href="projects.html">
-            View Projects
-          </a>
-        </div>
+</head>
+<body>
+    <div id="auth-container">
+        <h2>User Login</h2>
+        <input type="email" id="email" placeholder="email" required>
+        <input type="password" id="password" placeholder="password" required>
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
     </div>
 
-     
-
-      
-
-    
-      <div class="ward">
-         <div class="card">
-               <div class="border">
-                <h5 class="jie">That's me</h5>
-    
-               </div>
-         </div>
-        </div>
-      
-
-
-    
-
-</div>
-
-<script src="loadComponent.js"></script>
-
+    <div id="comment-section" style="display:none;">
+        <h2>Comment</h2>
+        <textarea id="comment-text" placeholder="Typing"></textarea>
+        <button onclick="postComment()">Comment</button>
+        <div id="comments"></div>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <script src="login.js" defer></script>
 </body>
 </html>
