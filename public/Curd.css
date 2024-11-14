@@ -1,7 +1,7 @@
-/* 全局样式 */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    background-color: #F4EEE0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,13 +9,13 @@ body {
     color: #333;
 }
 
-/* 标题样式 */
+
 h1 {
     font-size: 2rem;
     color: #333;
 }
 
-/* 容器样式 */
+
 .container {
     width: 100%;
     max-width: 500px;
@@ -25,11 +25,19 @@ h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 输入框和按钮样式 */
+
 .add-task {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+#back{
+    display: flex;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: border-color 0.3s ease;
+    outline: none;
 }
 
 #todo-input {
@@ -61,7 +69,7 @@ h1 {
     background-color: #0056b3;
 }
 
-/* 任务列表样式 */
+
 ul {
     list-style: none;
     padding: 0;
@@ -91,7 +99,7 @@ li span {
     margin-right: 10px;
 }
 
-/* 按钮组样式 */
+
 li button {
     padding: 5px 10px;
     font-size: 14px;
@@ -101,8 +109,7 @@ li button {
     transition: background-color 0.3s ease;
 }
 
-/* 各个按钮的颜色 */
-li button:nth-child(2) { /* Edit 按钮 */
+li button:nth-child(2) { 
     background-color: #ffc107;
     color: #fff;
 }
@@ -111,7 +118,7 @@ li button:nth-child(2):hover {
     background-color: #e0a800;
 }
 
-li button:nth-child(3) { /* Complete 按钮 */
+li button:nth-child(3) { 
     background-color: #28a745;
     color: #fff;
 }
@@ -120,7 +127,7 @@ li button:nth-child(3):hover {
     background-color: #218838;
 }
 
-li button:nth-child(4) { /* Delete 按钮 */
+li button:nth-child(4) { 
     background-color: #dc3545;
     color: #fff;
 }

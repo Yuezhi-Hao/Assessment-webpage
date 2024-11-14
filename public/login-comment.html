@@ -9,6 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database-compat.js"></script>
     <script src="firebaseconfig.js" defer></script>
+    <link rel="stylesheet" href="header.css">
 
 </head>
 <body>
@@ -19,7 +20,7 @@
         <button onclick="register()">Register</button>
         <button onclick="login()">Login</button>
     </div>
-
+    <button id="back"><a href="Menu.html">back</a></button>
     <div id="comment-section" style="display:none;">
         <h2>Comment</h2>
         <textarea id="comment-text" placeholder="Typing"></textarea>
@@ -27,6 +28,9 @@
         <div id="comments"></div>
         <button onclick="logout()">Logout</button>
     </div>
+
+    <script src="loadComponent.js" defer></script>
     <script src="login.js" defer></script>
+   
 </body>
 </html>
